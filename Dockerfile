@@ -17,6 +17,4 @@ RUN apt-get -y install lizardfs-master
 
 RUN mkdir -p /var/lib/mfs
 
-cp /var/lib/mfs/metadata.mfs.empty /var/lib/mfs/metadata.mfs
-
-git@github.com:badri/lizardfs-master.git
+RUN cp /var/lib/mfs/metadata.mfs.empty /var/lib/mfs/metadata.mfs
