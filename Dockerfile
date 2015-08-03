@@ -13,7 +13,7 @@ RUN echo "deb-src http://packages.lizardfs.com/ubuntu/trusty trusty main" >> /et
 
 RUN apt-get -y update
 
-RUN apt-get install lizardfs-master
+RUN apt-get -y install lizardfs-master
 
 RUN mkdir -p /var/lib/mfs
 
