@@ -18,3 +18,7 @@ RUN apt-get -y install lizardfs-master
 RUN mkdir -p /var/lib/mfs
 
 RUN cp /var/lib/mfs/metadata.mfs.empty /var/lib/mfs/metadata.mfs
+
+RUN cp /etc/mfs/mfsexports.cfg.dist /etc/mfs/mfsexports.cfg
+
+RUN sed -i 's/LIZARDFSMASTER_ENABLE=false/LIZARDFSMASTER_ENABLE=true/g' lizardfs-master
