@@ -21,4 +21,6 @@ RUN cp /var/lib/mfs/metadata.mfs.empty /var/lib/mfs/metadata.mfs
 
 RUN cp /etc/mfs/mfsexports.cfg.dist /etc/mfs/mfsexports.cfg
 
+RUN cp /etc/mfs/mfsmaster.cfg.dist /etc/mfs/mfsmaster.cfg
+
 RUN sed -i 's/LIZARDFSMASTER_ENABLE=false/LIZARDFSMASTER_ENABLE=true/g'  /etc/default/lizardfs-master
