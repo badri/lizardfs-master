@@ -24,3 +24,7 @@ RUN cp /etc/mfs/mfsexports.cfg.dist /etc/mfs/mfsexports.cfg
 RUN cp /etc/mfs/mfsmaster.cfg.dist /etc/mfs/mfsmaster.cfg
 
 RUN sed -i 's/LIZARDFSMASTER_ENABLE=false/LIZARDFSMASTER_ENABLE=true/g'  /etc/default/lizardfs-master
+
+EXPOSE 9419 9420 9421 9425
+
+ENTRYPOINT  ["mfsmaster", "-d", "start"]
