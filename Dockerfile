@@ -23,6 +23,8 @@ RUN cp /etc/mfs/mfsexports.cfg.dist /etc/mfs/mfsexports.cfg
 
 RUN cp /etc/mfs/mfsmaster.cfg.dist /etc/mfs/mfsmaster.cfg
 
+RUN echo "172.17.0.0/24 / rw,alldirs,maproot=0" >> /etc/mfs/mfsexports.cfg
+
 RUN sed -i 's/LIZARDFSMASTER_ENABLE=false/LIZARDFSMASTER_ENABLE=true/g'  /etc/default/lizardfs-master
 
 EXPOSE 9419 9420 9421 9425
